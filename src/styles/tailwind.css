@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navigation > a,
+.mobile-navigation > a {
+  @apply text-gray-primary hover:underline;
+}
+
+.navigation > a.active,
+.mobile-navigation > a.active {
+  @apply text-green-primary;
+}
+
+.mobile-navigation > a {
+  @apply text-4xl;
+}
