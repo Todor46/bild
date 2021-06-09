@@ -1,3 +1,4 @@
+import ProjectsCarousel from "../components/ProjectsCarousel/ProjectsCarousel";
 import Video from "../components/Video/Video";
 import "../styles/home.css";
 
@@ -19,9 +20,9 @@ const Home = () => {
         <div className="container max-w-screen-lg mx-auto md:grid grid-cols-12">
           <Video />
           <div className="col-span-7 sm:pl-[30px] pt-8 md:pt-0">
-            <h2 className="capitalize text-2xl text-gray-primary">
+            <h1 className="capitalize text-2xl text-gray-primary">
               Get to know us a little better!
-            </h2>
+            </h1>
             <p className="text-sm text-gray-dark pt-[30px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque eu erat lacus, vel congue mauris. Fusce velit justo,
@@ -38,6 +39,18 @@ const Home = () => {
             </p>
           </div>
         </div>
+      </section>
+      <section className="py-[50px]">
+        <h1 className="text-2xl text-gray-dark capitalize text-center">
+          A couple of our featured projects
+        </h1>
+        <p className="mt-6 text-gray-dark max-w-screen-md mx-auto text-sm text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          eu erat lacus, vel congue mauris. Fusce velit justo, faucibus eu
+          sagittis ac, gravida quis tortor. Suspendisse non urna mi, quis
+          tincidunt eros.
+        </p>
+        <ProjectsCarousel />
       </section>
     </>
   );
