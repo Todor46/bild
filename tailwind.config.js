@@ -13,6 +13,8 @@ module.exports = {
         },
         gray: {
           primary: "#737373",
+          dark: "#8a8888",
+          light: "#aeadad",
         },
       },
     },
