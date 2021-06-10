@@ -18,6 +18,9 @@ module.exports = {
           25: "#efefef",
         },
       },
+      screens: {
+        lg: "940px",
+      },
     },
   },
   variants: {
