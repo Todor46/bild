@@ -1,4 +1,5 @@
 import { Transition } from "@headlessui/react";
+import { Fragment } from "react";
 import Hamburger from "../Hamburger/Hamburger";
 import Navigation from "./Navigation";
 
@@ -14,8 +15,9 @@ const MobileNavigation = ({ open, setIsOpen }) => {
         leave="transition-opacity duration-300"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
+        as={Fragment}
       >
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-8 bg-white mobile-navigation">
+        <div className="fixed z-10 inset-0 h-screen flex flex-col items-center justify-center gap-8 bg-white mobile-navigation">
           <Navigation />
         </div>
       </Transition>

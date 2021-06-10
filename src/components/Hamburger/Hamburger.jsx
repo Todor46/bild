@@ -1,7 +1,7 @@
 const Hamburger = ({ open, setIsOpen }) => {
   return (
     <button
-      className="text-gray-500 w-10 h-10 relative focus:outline-none bg-white z-10"
+      className="text-gray-500 w-10 h-10 relative focus:outline-none bg-white z-20"
       onClick={() => setIsOpen(!open)}
     >
       <span class="sr-only">Open main menu</span>
