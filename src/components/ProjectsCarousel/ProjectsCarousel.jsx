@@ -76,7 +76,7 @@ const ProjectsCarousel = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="absolute h-20 w-20 flex items-center justify-center rounded-full bg-green-primary">
+                    <span className="absolute h-20 w-20 flex items-center justify-center rounded-full bg-green-500">
                       <LinkIcon className="text-white fill-current" />
                     </span>
                   </a>
@@ -110,10 +110,10 @@ const ProjectsCarousel = () => {
             {projects.map((project, idx) => (
               <SplideSlide>
                 <div key={project.id} className="text-center">
-                  <h2 className="text-lg text-gray-dark mb-7">
+                  <h2 className="text-lg text-gray-500 mb-7">
                     {project.title}
                   </h2>
-                  <p className="text-sm text-gray-dark px-12 md:px-24">
+                  <p className="text-sm text-gray-500 px-12 md:px-24">
                     {project.description}
                   </p>
                 </div>

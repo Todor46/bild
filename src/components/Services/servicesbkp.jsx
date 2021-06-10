@@ -10,11 +10,11 @@ const Services = () => {
 
   return (
     <>
-      <div className="bg-gray-25">
-        <div className="max-w-screen-lg mx-auto lg:px-0 grid grid-cols-4 h-[200px] text-gray-primary">
+      <div className="bg-gray-100">
+        <div className="max-w-screen-lg mx-auto lg:px-0 grid grid-cols-4 h-[200px] text-gray-600">
           <button
-            className={`flex flex-col items-center justify-center md:justify-end md:pb-10 hover:text-gray-darker hover:bg-gray-dadada ${
-              activeTab === "websites" ? "bg-gray-dadada" : ""
+            className={`flex flex-col items-center justify-center md:justify-end md:pb-10 hover:text-gray-500 hover:bg-gray-200 ${
+              activeTab === "websites" ? "bg-gray-200" : ""
             }`}
             onClick={() => setActiveTab("websites")}
           >
@@ -24,7 +24,7 @@ const Services = () => {
             </p>
           </button>
           <button
-            className="flex flex-col items-center justify-end pb-10 hover:text-gray-darker hover:bg-gray-dadada"
+            className="flex flex-col items-center justify-end pb-10 hover:text-gray-500 hover:bg-gray-200"
             onClick={() => setActiveTab("photography")}
           >
             <PhotographyIcon className="fill-current" />
@@ -33,14 +33,14 @@ const Services = () => {
             </p>
           </button>
           <button
-            className="flex flex-col items-center justify-end pb-10 hover:text-gray-darker hover:bg-gray-dadada"
+            className="flex flex-col items-center justify-end pb-10 hover:text-gray-500 hover:bg-gray-200"
             onClick={() => setActiveTab("seo")}
           >
             <SeoIcon className="fill-current" />
             <p className="text-xl font-semibold mt-[30px] uppercase">Seo</p>
           </button>
           <button
-            className="flex flex-col items-center justify-end pb-10 hover:text-gray-darker hover:bg-gray-dadada"
+            className="flex flex-col items-center justify-end pb-10 hover:text-gray-500 hover:bg-gray-200"
             onClick={() => setActiveTab("applications")}
           >
             <ApplicationsIcon className="fill-current" />
@@ -51,7 +51,7 @@ const Services = () => {
         </div>
       </div>
       {activeTab === "websites" && (
-        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-dark py-8">
+        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-500 py-8">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque eu erat lacus, vel congue mauris. Fusce velit justo,
@@ -75,7 +75,7 @@ const Services = () => {
         </div>
       )}
       {activeTab === "photography" && (
-        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-dark py-8">
+        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-500 py-8">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque eu erat lacus, vel congue mauris. Fusce velit justo,
@@ -92,7 +92,7 @@ const Services = () => {
         </div>
       )}
       {activeTab === "seo" && (
-        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-dark py-8">
+        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-500 py-8">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque eu erat lacus, vel congue mauris. Fusce velit justo,
@@ -106,7 +106,7 @@ const Services = () => {
         </div>
       )}
       {activeTab === "applications" && (
-        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-dark py-8">
+        <div className="max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-500 py-8">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque eu erat lacus, vel congue mauris. Fusce velit justo,

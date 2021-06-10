@@ -9,22 +9,22 @@ const SocialBar = () => {
   return (
     <div className="gap-2 hidden sm:flex">
       <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-        <Twitter className="fill-current text-[#dadada] hover:text-blue-primary" />
+        <Twitter className="fill-current text-[#dadada] hover:text-blue-500" />
       </a>
       <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-        <Facebook className="fill-current text-[#dadada] hover:text-blue-primary" />
+        <Facebook className="fill-current text-[#dadada] hover:text-blue-500" />
       </a>
       <a href="https://www.rss.com" target="_blank" rel="noreferrer">
-        <Rss className="fill-current text-[#dadada] hover:text-blue-primary" />
+        <Rss className="fill-current text-[#dadada] hover:text-blue-500" />
       </a>
       <a href="https://www.pinterest.com" target="_blank" rel="noreferrer">
-        <Pinterest className="fill-current text-[#dadada] hover:text-blue-primary" />
+        <Pinterest className="fill-current text-[#dadada] hover:text-blue-500" />
       </a>
       <a href="https://www.google.com" target="_blank" rel="noreferrer">
-        <Google className="fill-current text-[#dadada] hover:text-blue-primary" />
+        <Google className="fill-current text-[#dadada] hover:text-blue-500" />
       </a>
       <a href="https://www.dribbble.com" target="_blank" rel="noreferrer">
-        <Dribbble className="fill-current text-[#dadada] hover:text-blue-primary" />
+        <Dribbble className="fill-current text-[#dadada] hover:text-blue-500" />
       </a>
     </div>
   );

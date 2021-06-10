@@ -4,12 +4,12 @@
 
 .navigation > a,
 .mobile-navigation > a {
-  @apply text-gray-primary hover:underline;
+  @apply text-gray-600 hover:underline;
 }
 
 .navigation > a.active,
 .mobile-navigation > a.active {
-  @apply text-green-primary;
+  @apply text-green-500;
 }
 
 .mobile-navigation > a {
@@ -17,7 +17,7 @@
 }
 
 .carousel-arrow {
-  @apply absolute top-1/2 transform -translate-y-1/2 fill-current text-gray-200 hover:text-green-primary z-10;
+  @apply absolute top-1/2 transform -translate-y-1/2 fill-current text-gray-200 hover:text-green-500 z-10;
 }
 .slider-big {
   @apply overflow-hidden;

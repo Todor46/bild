@@ -9,7 +9,7 @@ const Services = () => {
   const titleClasses =
     "text-xl font-semibold md:mt-[30px] uppercase hidden md:block";
   const tabContentClasses =
-    "max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-dark py-8";
+    "max-w-screen-lg px-4 lg:px-0 mx-auto text-sm text-gray-500 py-8";
   const iconClasses = "fill-current h-8 w-8 md:h-auto md:w-auto";
 
   const tabs = [
@@ -53,12 +53,12 @@ const Services = () => {
 
   return (
     <>
-      <div className="bg-gray-25">
+      <div className="bg-gray-100">
         <Tabs
           tabs={tabs}
-          buttonClasses="flex flex-col items-center justify-center md:justify-end md:pb-10 hover:text-gray-darker hover:bg-gray-dadada"
-          activeClass="bg-gray-dadada"
-          tabsWrapperClasses="max-w-screen-lg mx-auto lg:px-0 grid grid-cols-4 h-20 md:h-[200px] text-gray-primary"
+          buttonClasses="flex flex-col items-center justify-center md:justify-end md:pb-10 hover:text-gray-700 hover:bg-gray-200"
+          activeClass="bg-gray-200"
+          tabsWrapperClasses="max-w-screen-lg mx-auto lg:px-0 grid grid-cols-4 h-20 md:h-[200px] text-gray-600"
         >
           {(activeTab) => {
             return (

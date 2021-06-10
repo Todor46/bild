@@ -1,5 +1,5 @@
 const Work = () => {
-  return "work";
+  return <div className="">work</div>;
 };
 
 export default Work;
