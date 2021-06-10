@@ -54,7 +54,7 @@ const ProjectsCarousel = () => {
             interval: 300,
             focus: "center",
           }}
-          onMoved={(e) => setActiveSlide(e._i)}
+          onMoved={({ _i }) => setActiveSlide(_i)}
           ref={primaryRef}
           className="slider-big"
         >
@@ -67,12 +67,14 @@ const ProjectsCarousel = () => {
                     alt={project.title}
                     className="mx-auto"
                   />
-                  {activeSlide !== idx && (
-                    <div className="absolute inset-0 bg-white opacity-60"></div>
-                  )}
+                  <div
+                    className={`absolute inset-0 bg-white transition-all ${
+                      activeSlide !== idx ? "opacity-60" : "opacity-0"
+                    }`}
+                  ></div>
                   <a
                     href="https://www.google.com"
-                    className="inset-0 absolute opacity-0 hover:opacity-100 flex items-center justify-center "
+                    className="inset-0 absolute opacity-0 hover:opacity-100 flex items-center justify-center transition-all"
                     target="_blank"
                     rel="noreferrer"
                   >

@@ -12,7 +12,7 @@ const Home = () => {
           eu eratiuy lacus, vel congue mauris. Fusce velitaria justo, faucibus
           eu.
         </div>
-        <button className="uppercase bg-green-500 font-medium text-white px-4 py-2 mt-5 text-sm">
+        <button className="uppercase bg-green-500 hover:bg-green-400 transition-all font-medium text-white px-4 py-2 mt-5 text-sm">
           Browse portfolio
         </button>
       </section>

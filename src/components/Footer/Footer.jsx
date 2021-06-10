@@ -9,7 +9,7 @@ const Footer = () => {
           <h1 className="text-2xl uppercase font-medium text-gray-100">
             Are you ready to be blown away?
           </h1>
-          <button className="uppercase bg-green-500 px-6 py-2 text-white font-semibold mt-6 md:mt-0">
+          <button className="uppercase bg-green-500 hover:bg-green-400 transition-colors px-6 py-2 text-white font-semibold mt-6 md:mt-0">
             Click here to find out
           </button>
         </div>
