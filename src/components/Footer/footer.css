@@ -1,0 +1,16 @@
+.footer-navigation {
+  text-transform: uppercase;
+}
+
+.footer-navigation > * {
+  margin-left: 6px;
+}
+
+.footer-navigation > *:not(:last-child)::after {
+  content: "/";
+  margin-left: 6px;
+}
+
+.footer-navigation a:hover {
+  text-decoration: underline;
+}

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 import FullLoader from "./components/FullLoader/FullLoader";
 import Header from "./components/Header/Header";
 import { ABOUT, CONTACT, HOME, WORK } from "./constants/routes";
@@ -22,6 +23,7 @@ function App() {
           <Route path={CONTACT} component={Contact} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </Suspense>
     </Router>
   );
