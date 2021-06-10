@@ -1,5 +1,11 @@
+import PageTitle from "../components/PageTitle/PageTitle";
+
 const About = () => {
-  return "about";
+  return (
+    <>
+      <PageTitle title="About my business" />
+    </>
+  );
 };
 
 export default About;
