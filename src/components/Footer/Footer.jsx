@@ -20,7 +20,7 @@ const Footer = () => {
             Copyright 2013 Display. All Rights Reserved.
           </h4>
           <div className="footer-navigation mt-3 md:mt-0">
-            <Navigation />
+            <Navigation asList />
           </div>
         </div>
       </div>

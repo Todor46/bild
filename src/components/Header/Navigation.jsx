@@ -1,16 +1,40 @@
 import { NavLink } from "react-router-dom";
 import { ABOUT, CONTACT, HOME, WORK } from "../../constants/routes";
 
-const Navigation = () => {
+const Navigation = ({ asList }) => {
+  const navigation = [
+    {
+      route: HOME,
+      name: "Home",
+      exact: true,
+    },
+    {
+      route: ABOUT,
+      name: "About",
+      exact: false,
+    },
+    {
+      route: WORK,
+      name: "Work",
+      exact: false,
+    },
+    {
+      route: CONTACT,
+      name: "Contact",
+      exact: false,
+    },
+  ];
+
   return (
-    <>
-      <NavLink to={HOME} exact>
-        Home
-      </NavLink>
-      <NavLink to={ABOUT}>About</NavLink>
-      <NavLink to={WORK}>Work</NavLink>
-      <NavLink to={CONTACT}>Contact</NavLink>
-    </>
+    <ul>
+      {navigation.map((nav) => (
+        <li>
+          <NavLink to={nav.route} exact={nav.exact}>
+            {nav.name}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
   );
 };
 

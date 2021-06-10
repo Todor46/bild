@@ -17,7 +17,7 @@ const MobileNavigation = ({ open, setIsOpen }) => {
         leaveTo="opacity-0"
         as={Fragment}
       >
-        <div className="fixed z-10 inset-0 h-screen flex flex-col items-center justify-center gap-8 bg-white mobile-navigation">
+        <div className="fixed z-10 inset-0 h-screen flex flex-col items-center justify-center bg-white mobile-navigation">
           <Navigation />
         </div>
       </Transition>

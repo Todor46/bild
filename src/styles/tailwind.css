@@ -2,18 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.navigation > a,
-.mobile-navigation > a {
+.navigation ul {
+  @apply flex gap-10;
+}
+
+.navigation a,
+.mobile-navigation a {
   @apply text-gray-600 hover:underline;
 }
 
-.navigation > a.active,
-.mobile-navigation > a.active {
+.navigation a.active,
+.mobile-navigation a.active {
   @apply text-green-500;
 }
 
-.mobile-navigation > a {
-  @apply text-4xl;
+.mobile-navigation li {
+  @apply text-4xl mb-8;
 }
 
 .carousel-arrow {

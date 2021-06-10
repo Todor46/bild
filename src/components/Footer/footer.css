@@ -2,11 +2,17 @@
   text-transform: uppercase;
 }
 
-.footer-navigation > * {
+.footer-navigation ul {
+  display: flex;
+  width: min-content;
+  margin: auto;
+}
+
+.footer-navigation li {
   margin-left: 6px;
 }
 
-.footer-navigation > *:not(:last-child)::after {
+.footer-navigation li:not(:last-child)::after {
   content: "/";
   margin-left: 6px;
 }
