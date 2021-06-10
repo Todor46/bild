@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import FullLoader from "./components/FullLoader/FullLoader";
 import Header from "./components/Header/Header";
 import { ABOUT, CONTACT, HOME, WORK } from "./constants/routes";
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <Suspense fallback="lading...">
+      <Suspense fallback={<FullLoader />}>
         <Header />
         <Switch>
           <Route path={HOME} component={Home} exact />
