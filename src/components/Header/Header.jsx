@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import MainNavigation from "./MainNavigation";
 import MobileNavigation from "./MobileNavigation";
 import SocialBar from "./SocialBar";
 
-const Header = () => {
+const Header = memo(() => {
   const [navigationOpen, setNavigationOpen] = useState(false);
 
   const location = useLocation();
@@ -26,6 +26,6 @@ const Header = () => {
       <MainNavigation />
     </div>
   );
-};
+});
 
 export default Header;
