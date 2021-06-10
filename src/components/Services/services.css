@@ -1,0 +1,7 @@
+ol.arrows-list {
+  list-style-image: url("./img/bullet.svg");
+}
+
+ol.arrows-list > * {
+  margin-bottom: 6px;
+}

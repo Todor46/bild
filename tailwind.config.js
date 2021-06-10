@@ -16,6 +16,8 @@ module.exports = {
           dark: "#8a8888",
           light: "#aeadad",
           25: "#efefef",
+          darker: "#423e3e",
+          dadada: "#dadada",
         },
       },
       screens: {

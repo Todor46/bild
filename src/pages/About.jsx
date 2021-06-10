@@ -1,10 +1,11 @@
 import PageTitle from "../components/PageTitle/PageTitle";
+import Services from "../components/Services/Services";
 
 const About = () => {
   return (
     <>
       <PageTitle title="About my business" />
-      <div className="container mx-auto max-w-screen-lg md:grid grid-cols-12 grid-rows-2 gap-7 text-sm text-gray-dark px-4 lg:px-0">
+      <section className="container mx-auto max-w-screen-lg md:grid grid-cols-12 grid-rows-2 gap-7 text-sm text-gray-dark px-4 lg:px-0">
         <img
           src="/images/about.png"
           alt="about"
@@ -56,7 +57,15 @@ const About = () => {
             elit congue lacinia.
           </p>
         </div>
-      </div>
+      </section>
+      <section>
+        <div className="container mx-auto max-w-screen-lg px-4 lg:px-0">
+          <h1 className="text-2xl uppercase text-gray-dark font-semibold mb-5">
+            Services
+          </h1>
+        </div>
+        <Services />
+      </section>
     </>
   );
 };
