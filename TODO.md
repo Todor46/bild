@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Popravit link ikonu na mobile  
 - [ ] Provjeriti sirine containera  
 - [ ] React memo za header  
 

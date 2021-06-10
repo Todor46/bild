@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <section className="text-center pb-12 hero">
         <img src="/images/slider.png" alt="hero" className="w-full" />
-        <div className="max-w-screen-md  mx-auto text-[#aeadad] mt-[50px] font-medium">
+        <div className="max-w-screen-md  mx-auto text-[#aeadad] mt-[50px] font-medium px-4 md:px-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
           eu eratiuy lacus, vel congue mauris. Fusce velitaria justo, faucibus
           eu.
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="py-[50px]">
+      <section className="py-[50px] px-4 md:px-0">
         <h1 className="text-2xl text-gray-dark capitalize text-center">
           A couple of our featured projects
         </h1>

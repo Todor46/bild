@@ -3,7 +3,6 @@ import { getProjectsByNumber } from "../../services/projectsService";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { ReactComponent as LinkIcon } from "./img/link.svg";
-import { ReactComponent as ArrowLeft } from "./img/arrow_left.svg";
 import { ReactComponent as ArrowRight } from "./img/arrow_right.svg";
 
 const ProjectsCarousel = () => {
@@ -26,15 +25,29 @@ const ProjectsCarousel = () => {
     primaryRef.current.sync(secondaryRef.current.splide);
   }, []);
 
+  const screenWidth = window.screen.width;
+
+  const breakpoints = {
+    xs: 576,
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+  };
+
+  let perPage;
+  perPage = 1;
+  if (screenWidth > breakpoints.xs) perPage = 3;
+  if (screenWidth > breakpoints.lg) perPage = 5;
+
   return (
     projects && (
       <div className="mt-[50px]">
         <Splide
           options={{
             type: "loop",
-            perPage: 5,
+            perPage: perPage,
             perMove: 1,
-            gap: 20,
             arrows: false,
             pagination: false,
             autoplay: true,
@@ -48,8 +61,12 @@ const ProjectsCarousel = () => {
           {projects.map((project, idx) => {
             return (
               <SplideSlide>
-                <div key={project.id} className="relative mx-2">
-                  <img src={project.image} alt={project.title} />
+                <div key={project.id} className="relative mx-[10px]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="mx-auto"
+                  />
                   {activeSlide !== idx && (
                     <div className="absolute inset-0 bg-white opacity-60"></div>
                   )}
@@ -96,7 +113,7 @@ const ProjectsCarousel = () => {
                   <h2 className="text-lg text-gray-dark mb-7">
                     {project.title}
                   </h2>
-                  <p className="text-sm text-gray-dark px-24">
+                  <p className="text-sm text-gray-dark px-12 md:px-24">
                     {project.description}
                   </p>
                 </div>
