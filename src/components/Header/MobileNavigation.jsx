@@ -1,4 +1,4 @@
-import { Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import Hamburger from "../Hamburger/Hamburger";
 import Navigation from "./Navigation";
@@ -17,9 +17,14 @@ const MobileNavigation = ({ open, setIsOpen }) => {
         leaveTo="opacity-0"
         as={Fragment}
       >
-        <div className="fixed z-10 inset-0 h-screen flex flex-col items-center justify-center bg-white mobile-navigation">
-          <Navigation />
-        </div>
+        <Dialog onClose={() => setIsOpen(false)}>
+          <div className="fixed z-10 inset-0 h-screen flex flex-col items-center justify-center bg-white mobile-navigation">
+            <div className="absolute top-9 right-[16px]">
+              <Hamburger open={open} setIsOpen={setIsOpen} />
+            </div>
+            <Navigation />
+          </div>
+        </Dialog>
       </Transition>
     </div>
   );
