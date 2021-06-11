@@ -43,17 +43,17 @@ const Portfolio = ({ layout }) => {
         <div
           className={`${
             layout === "grid" ? "grid gap-5" : "flex flex-col gap-12"
-          } grid-cols-2 sm:grid-cols-3`}
+          } grid-cols-1 sm:grid-cols-2 md:grid-cols-3`}
         >
           {projects.map((project) =>
             layout === "grid" ? (
               <ProjectThumb project={project} />
             ) : (
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="col-span-1">
                   <ProjectThumb project={project} />
                 </div>
-                <div className="col-span-1">
+                <div className="col-span-1 hidden sm:block">
                   <h2 className="text-xl font-semibold text-gray-600 mb-4">
                     {project.title}
                   </h2>
