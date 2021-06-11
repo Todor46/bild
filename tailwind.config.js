@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      margin: {
+        "-13": "-50px",
+      },
       colors: {
         blue: {
           DEFAULT: "#00BCF7",
