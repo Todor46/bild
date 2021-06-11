@@ -42,3 +42,11 @@
   content: "/";
   @apply ml-2;
 }
+
+.work-navigation a:hover {
+  @apply underline;
+}
+
+.work-navigation a.active {
+  @apply text-green-500;
+}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   APPLICATIONS,
   PHOTOGRAPHY,
@@ -15,19 +15,21 @@ const WorkNav = ({ layout, setLayout }) => {
       <div className="flex justify-between items-center">
         <ul className="work-navigation">
           <li>
-            <Link to={WORK}>All</Link>
+            <NavLink to={WORK} exact>
+              All
+            </NavLink>
           </li>
           <li>
-            <Link to={PRINT}>Print</Link>
+            <NavLink to={PRINT}>Print</NavLink>
           </li>
           <li>
-            <Link to={PHOTOGRAPHY}>Photography</Link>
+            <NavLink to={PHOTOGRAPHY}>Photography</NavLink>
           </li>
           <li>
-            <Link to={WEB}>Web</Link>
+            <NavLink to={WEB}>Web</NavLink>
           </li>
           <li>
-            <Link to={APPLICATIONS}>Applications</Link>
+            <NavLink to={APPLICATIONS}>Applications</NavLink>
           </li>
         </ul>
         <div className="flex space-x-3 text-gray-600">
