@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import InfiniteScroll from "react-infinite-scroller";
 import { getProjectsFiltered } from "../../services/projectsService";
 import ProjectThumb from "../ProjectThumb/ProjectThumb";
+import Spinner from "../Spinner/Spinner";
 
 const Portfolio = ({ layout }) => {
   const [projects, setProjects] = useState([]);
@@ -33,12 +34,16 @@ const Portfolio = ({ layout }) => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 my-[50px]">
+    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 my-[50px] relative">
       <InfiniteScroll
         pageStart={0}
         loadMore={fetchData}
         hasMore={hasMore}
-        loader="loading..."
+        loader={
+          <div className="text-center py-10">
+            <Spinner />
+          </div>
+        }
       >
         <div
           className={`${
