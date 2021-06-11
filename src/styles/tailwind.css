@@ -2,51 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-.navigation ul {
-  @apply flex gap-10;
-}
+@layer components {
+  button {
+    @apply focus:outline-none focus-visible:outline;
+  }
 
-.navigation a,
-.mobile-navigation a {
-  @apply text-gray-600 hover:underline;
-}
+  .navigation ul {
+    @apply flex gap-10;
+  }
 
-.navigation a.active,
-.mobile-navigation a.active {
-  @apply text-green-500;
-}
+  .navigation a,
+  .mobile-navigation a {
+    @apply text-gray-600 hover:underline;
+  }
 
-.mobile-navigation li {
-  @apply text-4xl mb-8;
-}
+  .navigation a.active,
+  .mobile-navigation a.active {
+    @apply text-green-500;
+  }
 
-.carousel-arrow {
-  @apply absolute top-1/2 transform -translate-y-1/2 fill-current text-gray-200 hover:text-green-500 z-10;
-}
-.slider-big {
-  @apply overflow-hidden;
-}
-.slider-big .splide__track {
-  @apply -mx-20;
-}
+  .mobile-navigation li {
+    @apply text-4xl mb-8;
+  }
 
-.work-navigation {
-  @apply flex uppercase font-semibold;
-}
+  .carousel-arrow {
+    @apply absolute top-1/2 transform -translate-y-1/2 fill-current text-gray-200 hover:text-green-500 z-10;
+  }
+  .slider-big {
+    @apply overflow-hidden;
+  }
+  .slider-big .splide__track {
+    @apply -mx-20;
+  }
 
-.work-navigation li {
-  @apply ml-2 text-lg text-gray-500;
-}
+  .work-navigation {
+    @apply flex uppercase font-semibold;
+  }
 
-.work-navigation li:not(:last-child):after {
-  content: "/";
-  @apply ml-2;
-}
+  .work-navigation li {
+    @apply ml-2 text-lg text-gray-500;
+  }
 
-.work-navigation a:hover {
-  @apply underline;
-}
+  .work-navigation li:not(:last-child):after {
+    content: "/";
+    @apply ml-2;
+  }
 
-.work-navigation a.active {
-  @apply text-green-500;
+  .work-navigation a:hover {
+    @apply underline;
+  }
+
+  .work-navigation a.active {
+    @apply text-green-500;
+  }
 }

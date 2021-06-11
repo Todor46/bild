@@ -45,10 +45,14 @@ module.exports = {
       screens: {
         lg: "940px",
       },
+      outline: {
+        DEFAULT: ["1px #000000 auto"],
+      },
     },
   },
   variants: {
     extend: {
+      outline: ["focus-visible"],
       fill: ["hover"],
     },
   },
