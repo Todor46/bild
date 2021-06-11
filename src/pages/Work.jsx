@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageTitle from "../components/PageTitle/PageTitle";
+import Portfolio from "../components/Portfolio/Portfolio";
 import WorkNav from "../components/WorkNav/WorkNav";
 
 const Work = () => {
@@ -9,6 +10,7 @@ const Work = () => {
     <>
       <PageTitle title="Check out what I can do" />
       <WorkNav layout={layout} setLayout={setLayout} />
+      <Portfolio layout={layout} />
     </>
   );
 };
