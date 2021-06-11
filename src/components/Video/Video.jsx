@@ -10,7 +10,7 @@ const Video = () => {
   return (
     <>
       <div
-        className="w-full pt-[56.25%] bg-[#f39c12] col-span-5 relative text-white text-opacity-50 hover:text-opacity-80 cursor-pointer z-[1]"
+        className="w-full pt-[56.25%] bg-[#f39c12] col-span-5 relative text-white text-opacity-50 hover:text-opacity-80 cursor-pointer"
         onClick={() => setOpen(true)}
       >
         <Play className="fill-current absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
