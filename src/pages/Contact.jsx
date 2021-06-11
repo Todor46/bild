@@ -8,13 +8,13 @@ const Contact = () => {
   };
 
   const inputClasses =
-    "border-2 border-gray-500 px-[17px] mb-[15px] py-2 w-[350px] text-sm outline-none focus:border-gray-700";
+    "border-2 border-gray-500 px-[17px] mb-[15px] py-2 w-full sm:w-[350px] text-sm outline-none focus:border-gray-700";
 
   return (
     <>
       <PageTitle title="Got a question or inquiry?" />
       <Map />
-      <div className="max-w-screen-lg mx-auto px-4 lg:px-0 grid grid-cols-12 py-[50px]">
+      <div className="max-w-screen-lg mx-auto px-4 lg:px-0 sm:grid grid-cols-12 py-[50px]">
         <div className="col-span-7">
           <h1 className="text-2xl font-semibold uppercase mb-5">
             Contact Form
@@ -41,7 +41,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className="col-span-4 col-start-9 text-sm">
+        <div className="col-span-4 col-start-9 text-sm mt-10 sm:mt-0">
           <h1 className="text-2xl font-semibold uppercase mb-4">
             Contact Info
           </h1>
