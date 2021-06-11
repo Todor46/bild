@@ -1,6 +1,6 @@
 import { ReactComponent as LinkIcon } from "./img/link.svg";
 
-const ProjectCard = ({ project }) => {
+const ProjectThumb = ({ project }) => {
   return (
     <div key={project.id} className="relative aspect-w-4 aspect-h-3">
       <img
@@ -23,4 +23,4 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-export default ProjectCard;
+export default ProjectThumb;
