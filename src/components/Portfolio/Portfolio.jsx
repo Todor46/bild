@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import InfiniteScroll from "react-infinite-scroller";
 import { getProjectsFiltered } from "../../services/projectsService";
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectThumb from "../ProjectThumb/ProjectThumb";
 
 const Portfolio = ({ layout }) => {
   const [projects, setProjects] = useState([]);
@@ -42,12 +42,26 @@ const Portfolio = ({ layout }) => {
       >
         <div
           className={`${
-            layout === "grid" ? "grid" : "flex flex-col"
-          } grid-cols-2 sm:grid-cols-3 gap-5`}
+            layout === "grid" ? "grid gap-5" : "flex flex-col gap-12"
+          } grid-cols-2 sm:grid-cols-3`}
         >
-          {projects.map((project) => (
-            <ProjectCard project={project} />
-          ))}
+          {projects.map((project) =>
+            layout === "grid" ? (
+              <ProjectThumb project={project} />
+            ) : (
+              <div className="grid grid-cols-2 gap-5">
+                <div className="col-span-1">
+                  <ProjectThumb project={project} />
+                </div>
+                <div className="col-span-1">
+                  <h2 className="text-xl font-semibold text-gray-600 mb-4">
+                    {project.title}
+                  </h2>
+                  <p>{project.description}</p>
+                </div>
+              </div>
+            )
+          )}
         </div>
       </InfiniteScroll>
     </div>
