@@ -91,14 +91,22 @@ const WorkNav = ({ layout, setLayout }) => {
           ))}
         </ul>
         <div className="flex space-x-3 text-gray-600">
-          <button type="button" onClick={() => setLayout("grid")}>
+          <button
+            type="button"
+            onClick={() => setLayout("grid")}
+            className="hover:text-gray-400"
+          >
             <GridIcon
               className={`fill-current ${
                 layout === "grid" ? "text-green-500" : ""
               }`}
             />
           </button>
-          <button type="button" onClick={() => setLayout("list")}>
+          <button
+            type="button"
+            onClick={() => setLayout("list")}
+            className="hover:text-gray-400"
+          >
             <ListIcon
               className={`fill-current ${
                 layout === "list" ? "text-green-500" : ""
