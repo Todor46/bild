@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route path={HOME} component={Home} exact />
           <Route path={ABOUT} component={About} />
-          <Route path={WORK} component={Work} />
+          <Route path={`${WORK}/:category?`} component={Work} />
           <Route path={CONTACT} component={Contact} />
           <Route component={NotFound} />
         </Switch>
