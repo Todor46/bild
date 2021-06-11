@@ -29,3 +29,16 @@
 .slider-big .splide__track {
   @apply -mx-20;
 }
+
+.work-navigation {
+  @apply flex uppercase font-semibold;
+}
+
+.work-navigation li {
+  @apply ml-2 text-lg text-gray-500;
+}
+
+.work-navigation li:not(:last-child):after {
+  content: "/";
+  @apply ml-2;
+}
