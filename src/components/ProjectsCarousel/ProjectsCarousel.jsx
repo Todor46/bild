@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { ReactComponent as LinkIcon } from "./img/link.svg";
 import { ReactComponent as ArrowRight } from "./img/arrow_right.svg";
+import { breakpoints } from "../../constants/breakpoints";
 
 const ProjectsCarousel = () => {
   const [projects, setProjects] = useState([]);
@@ -26,14 +27,6 @@ const ProjectsCarousel = () => {
   }, []);
 
   const screenWidth = window.screen.width;
-
-  const breakpoints = {
-    xs: 576,
-    sm: 640,
-    md: 768,
-    lg: 1024,
-    xl: 1280,
-  };
 
   let perPage;
   perPage = 1;
