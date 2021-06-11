@@ -13,19 +13,21 @@ function App() {
   const NotFound = lazy(() => import("./pages/NotFound"));
 
   return (
-    <Router>
-      <Suspense fallback={<FullLoader />}>
-        <Header />
-        <Switch>
-          <Route path={HOME} component={Home} exact />
-          <Route path={ABOUT} component={About} />
-          <Route path={`${WORK}/:category?`} component={Work} />
-          <Route path={CONTACT} component={Contact} />
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
-      </Suspense>
-    </Router>
+    <div className="text-gray-500">
+      <Router>
+        <Suspense fallback={<FullLoader />}>
+          <Header />
+          <Switch>
+            <Route path={HOME} component={Home} exact />
+            <Route path={ABOUT} component={About} />
+            <Route path={`${WORK}/:category?`} component={Work} />
+            <Route path={CONTACT} component={Contact} />
+            <Route component={NotFound} />
+          </Switch>
+          <Footer />
+        </Suspense>
+      </Router>
+    </div>
   );
 }
 
