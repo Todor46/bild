@@ -76,6 +76,9 @@ const Portfolio = ({ layout }) => {
           An error occurred. Please try again
         </div>
       )}
+      {!projects.length && !hasMore && !error && (
+        <div>There are no results</div>
+      )}
     </div>
   );
 };
