@@ -3,10 +3,14 @@ import Map from "../components/Map/Map";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = "Display - Contact";
+  }, []);
 
   const schema = yup.object().shape({
     name: yup.string().required().max(100).label("Name"),

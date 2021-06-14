@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import ProjectsCarousel from "../components/ProjectsCarousel/ProjectsCarousel";
 import Video from "../components/Video/Video";
 import "../styles/home.css";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Display - Home";
+  }, []);
+
   return (
     <>
       <section className="text-center pb-12 hero">

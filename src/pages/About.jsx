@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import PageTitle from "../components/PageTitle/PageTitle";
 import Services from "../components/Services/Services";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "Display - About";
+  }, []);
+
   return (
     <>
       <PageTitle title="About my business" />
