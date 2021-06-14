@@ -9,6 +9,7 @@ const Portfolio = ({ layout }) => {
   const [projects, setProjects] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(1);
+  const [error, setError] = useState(null);
   const pageSize = 10;
   const { category } = useParams();
 
@@ -29,7 +30,8 @@ const Portfolio = ({ layout }) => {
       setHasMore(data.length === 10);
       setPage(page + 1);
     } catch (err) {
-      console.error(err);
+      setError(err);
+      setHasMore(false);
     }
   };
 
@@ -69,6 +71,11 @@ const Portfolio = ({ layout }) => {
           )}
         </div>
       </InfiniteScroll>
+      {error && (
+        <div className="py-12 text-red-500 text-center">
+          An error occurred. Please try again
+        </div>
+      )}
     </div>
   );
 };

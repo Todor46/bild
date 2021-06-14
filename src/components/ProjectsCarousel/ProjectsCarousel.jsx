@@ -9,6 +9,7 @@ import { breakpoints } from "../../constants/breakpoints";
 const ProjectsCarousel = () => {
   const [projects, setProjects] = useState([]);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [error, setError] = useState(null);
 
   const primaryRef = useRef();
   const secondaryRef = useRef();
@@ -19,7 +20,7 @@ const ProjectsCarousel = () => {
         const { data } = await getProjectsByNumber(10);
         setProjects(data);
       } catch (err) {
-        console.error(err);
+        setError(err);
       }
     };
     fetchProjects();
@@ -32,6 +33,13 @@ const ProjectsCarousel = () => {
   perPage = 1;
   if (screenWidth > breakpoints.xs) perPage = 3;
   if (screenWidth > breakpoints.lg) perPage = 5;
+
+  if (error)
+    return (
+      <div className="mt-[50px] flex items-center justify-center">
+        <p className="text-red-500">An error occurred. Please try again</p>
+      </div>
+    );
 
   return (
     projects && (
