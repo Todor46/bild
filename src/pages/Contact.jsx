@@ -3,11 +3,9 @@ import Map from "../components/Map/Map";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     document.title = "Display - Contact";
   }, []);
@@ -20,7 +18,7 @@ const Contact = () => {
   });
   const {
     register,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
     handleSubmit,
   } = useForm({
     resolver: yupResolver(schema),
@@ -99,14 +97,17 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="bg-green-500 hover:bg-green-400 transition-colors text-white font-semibold uppercase text-sm px-4 py-2 mt-[15px]"
+                  disabled={isSubmitting}
                 >
-                  {loading ? "sending" : "Send message"}
+                  {isSubmitting ? "Sending..." : "Send message"}
                 </button>
               </form>
             </>
           ) : (
-            <div className="h-full w-full flex flex-col items-center justify-center  text-green-500 text-center font-semibold">
-              <p className="text-2xl mb-2">Form submited successfully!</p>
+            <div className="h-full w-full flex flex-col items-center justify-center  text-center font-semibold">
+              <p className="text-2xl mb-2 text-green-500">
+                Form submited successfully!
+              </p>
               <p>Thank you for reaching out</p>
             </div>
           )}
