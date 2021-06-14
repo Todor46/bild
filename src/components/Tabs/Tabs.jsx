@@ -12,9 +12,10 @@ const Tabs = ({
   return (
     <>
       <div className={tabsWrapperClasses}>
-        {tabs.map((tab) => {
+        {tabs.map((tab, idx) => {
           return (
             <button
+              key={idx}
               className={`${buttonClasses} ${
                 activeTab === tab.key ? activeClass : ""
               }`}

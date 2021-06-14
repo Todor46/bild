@@ -27,8 +27,8 @@ const Navigation = ({ asList }) => {
 
   return (
     <ul>
-      {navigation.map((nav) => (
-        <li>
+      {navigation.map((nav, idx) => (
+        <li key={idx}>
           <NavLink to={nav.route} exact={nav.exact}>
             {nav.name}
           </NavLink>

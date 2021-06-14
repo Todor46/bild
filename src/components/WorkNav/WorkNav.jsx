@@ -83,7 +83,7 @@ const WorkNav = ({ layout, setLayout }) => {
       <div className="hidden sm:flex justify-between items-center">
         <ul className="work-navigation">
           {navigation.map((link) => (
-            <li>
+            <li key={link.key}>
               <NavLink to={link.path} exact={link.exact}>
                 {link.label}
               </NavLink>

@@ -11,7 +11,6 @@ const Header = memo(() => {
 
   useEffect(() => {
     setNavigationOpen(false);
-    console.log(location);
   }, [location]);
 
   return (

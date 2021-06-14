@@ -61,8 +61,8 @@ const ProjectsCarousel = () => {
         >
           {projects.map((project, idx) => {
             return (
-              <SplideSlide>
-                <div key={project.id} className="relative mx-[10px]">
+              <SplideSlide key={project.id}>
+                <div className="relative mx-[10px]">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -100,19 +100,19 @@ const ProjectsCarousel = () => {
             }}
             ref={secondaryRef}
             renderControls={() => (
-              <div class="splide__arrows">
-                <button class="carousel-arrow splide__arrow--prev">
+              <div className="splide__arrows">
+                <button className="carousel-arrow splide__arrow--prev">
                   <ArrowRight />
                 </button>
-                <button class="carousel-arrow splide__arrow--next">
+                <button className="carousel-arrow splide__arrow--next">
                   <ArrowRight />
                 </button>
               </div>
             )}
           >
             {projects.map((project, idx) => (
-              <SplideSlide>
-                <div key={project.id} className="text-center">
+              <SplideSlide key={project.id}>
+                <div className="text-center">
                   <h2 className="text-lg text-gray-500 mb-7">
                     {project.title}
                   </h2>
